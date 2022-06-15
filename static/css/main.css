@@ -1,0 +1,173 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.header, main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.header {
+    display: flex;
+    background-color: black;
+    color: whitesmoke;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.header__link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.5s ease-in-out;
+}
+
+.header__link:hover{
+    color: #BDF2D5;
+}
+
+.header__logo {
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+}
+
+.form__input {
+    padding: 1rem;
+    font-family: inherit;
+    font-size: inherit;
+    resize: none;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: #fafafa;
+    margin-bottom: 1rem;
+}
+
+.form__button {
+    border: none;
+    font-size: inherit;
+    border-radius: 6px;
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+    background-color: #00FFC6;
+    align-self: flex-end;
+}
+
+.form__button:hover {
+    background-color: #1ee1ae;
+    transition-duration: 0.3s;
+}
+
+.dates {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+
+.dates__link {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+}
+
+.dates__link:not(.dates__link--current):hover {
+    background-color: #FAF0D7;
+}
+
+.dates__link--current {
+    background-color: #f9dba0;
+    
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dates__link:first-of-type,
+.dates__link:last-of-type,
+.dates__link:nth-of-type(2),
+.dates__link:nth-last-of-type(2)
+{
+    display: none;
+}
+
+@media screen and (min-width: 25rem)  {
+    .dates__link:nth-of-type(2),
+    .dates__link:nth-last-of-type(2){
+        display: block;
+    }
+}
+
+
+@media screen and (min-width: 35rem)  {
+    .dates__link:first-of-type,
+    .dates__link:last-of-type {
+        display: block;
+    }
+}
+
+.habit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 27px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff2d8;
+    border: 3px solid black;
+    border-radius: 6px;
+}
+
+.habit:not(.completed){
+    padding: 0;
+}
+
+.habit:not(.completed):hover{
+    background-color: #e9cd87;
+}
+
+.habit__icon {
+    width: 1em;
+    height: 1em;
+}
+
+.habit__name {
+    margin: 0;
+}
+
+.habit__form {
+    width: 100%;
+}
+
+.habit__button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-size: inherit;
+    font-family: inherit;
+    text-align: left;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+}
